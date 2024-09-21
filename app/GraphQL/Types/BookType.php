@@ -25,7 +25,7 @@ class BookType extends GraphQLType
                 'type'=>Type::nonNull(Type::int()),
                 'description'=>'id of book'
             ],
-            'tite'=>[
+            'title'=>[
                 'type'=>Type::nonNull(Type::string()),
                 'description'=>'title of book'
             ],

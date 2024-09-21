@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 use App\GraphQL\Queries\Author\AuthorQuery;
 use App\GraphQL\Queries\Author\AuthorsQuery;
+use App\GraphQL\Queries\Book\BookQuery;
+use App\GraphQL\Queries\Book\BooksQuery;
 use App\GraphQL\Queries\Category\CategoriesQuery;
 use App\GraphQL\Queries\Category\CategoryQuery;
 use App\GraphQL\Types\AuthorType;
@@ -85,6 +87,8 @@ return [
             'query' => [
                 'category'=>CategoryQuery::class,
                 'categories'=>CategoriesQuery::class,
+                'book'=>BookQuery::class,
+                'books'=>BooksQuery::class,
                 'author'=>AuthorQuery::class,
                 'authors'=>AuthorsQuery::class
             ],

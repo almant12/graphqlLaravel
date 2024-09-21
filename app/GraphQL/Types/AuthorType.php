@@ -34,7 +34,7 @@ class AuthorType extends GraphQLType
             ],
             'books'=>[
                 'type'=>Type::listOf(GraphQL::type('Book')),
-                'description'=>'a lost of books for author'
+                'description'=>'a list of books for author'
             ],
             'created_at' => [
             'type' => Type::nonNull(Type::string()),
