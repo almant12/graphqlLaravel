@@ -3,6 +3,7 @@
 declare(strict_types = 1);
 
 use App\GraphQL\Mutations\Category\CreateCategoryMutation;
+use App\GraphQL\Mutations\Category\DeleteCategoryMutation;
 use App\GraphQL\Queries\Author\AuthorQuery;
 use App\GraphQL\Queries\Author\AuthorsQuery;
 use App\GraphQL\Queries\Book\BookQuery;
@@ -94,7 +95,8 @@ return [
                 'authors'=>AuthorsQuery::class
             ],
             'mutation' => [
-                'createCategory'=>CreateCategoryMutation::class
+                'createCategory'=>CreateCategoryMutation::class,
+                'deleteCategory'=>DeleteCategoryMutation::class
             ],
             // The types only available in this schema
             'types' => [
