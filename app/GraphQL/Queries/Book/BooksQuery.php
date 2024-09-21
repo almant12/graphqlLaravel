@@ -2,13 +2,25 @@
 
 namespace App\GraphQL\Queries\Book;
 
-class BooksQuery
+use App\Models\Book;
+use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Facades\GraphQL;
+use Rebing\GraphQL\Support\Query;
+
+class BooksQuery extends Query
 {
-    /**
-     * Create a new class instance.
-     */
-    public function __construct()
+
+    protected $attributes = [
+        'name' => 'Books'
+    ];
+
+
+    public function type(): Type
     {
-        //
+        return Type::listOf(GraphQL::type('Book'));
+    }
+
+    public function resolve(){
+        return Book::all();
     }
 }
