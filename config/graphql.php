@@ -2,6 +2,14 @@
 
 declare(strict_types = 1);
 
+use App\GraphQL\Queries\Author\AuthorQuery;
+use App\GraphQL\Queries\Author\AuthorsQuery;
+use App\GraphQL\Queries\Category\CategoriesQuery;
+use App\GraphQL\Queries\Category\CategoryQuery;
+use App\GraphQL\Types\AuthorType;
+use App\GraphQL\Types\BookType;
+use App\GraphQL\Types\CategoryType;
+
 return [
     'route' => [
         // The prefix for routes; do NOT use a leading slash!
@@ -75,14 +83,19 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                'category'=>CategoryQuery::class,
+                'categories'=>CategoriesQuery::class,
+                'author'=>AuthorQuery::class,
+                'authors'=>AuthorsQuery::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
             ],
             // The types only available in this schema
             'types' => [
-                // ExampleType::class,
+                'Category'=>CategoryType::class,
+                'Book'=>BookType::class,
+                'Author'=>AuthorType::class
             ],
 
             // Laravel HTTP middleware

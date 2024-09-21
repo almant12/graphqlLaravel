@@ -2,13 +2,25 @@
 
 namespace App\GraphQL\Queries\Category;
 
-class CategoriesQuery
+use App\Models\Category;
+use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Facades\GraphQL;
+use Rebing\GraphQL\Support\Query;
+
+class CategoriesQuery extends Query
 {
-    /**
-     * Create a new class instance.
-     */
-    public function __construct()
-    {
-        //
+  
+    protected $attributes = [
+        'name'=>'categories'
+    ];
+
+
+    public function type(): Type{
+        return Type::listOf(GraphQL::type('Category'));
+    }
+
+
+    public function resolve($root,$args){
+        return Category::all();
     }
 }
