@@ -2,7 +2,7 @@
 
 namespace App\GraphQL\Queries\Book;
 
-
+use App\Models\Book;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;
@@ -17,5 +17,19 @@ class BookQuery extends Query
     public function type(): Type{
         return GraphQL::type('Book');
     }
-    
+
+
+    public function args(): array{
+        return [
+            'id'=>[
+                'name'=>'id',
+                'type'=>Type::int(),
+                'rules'=>['required']
+            ]
+        ];
+    }
+
+    public function resolve($root,$args){
+        return Book::findOrFail($args['id']);
+    }
 }
