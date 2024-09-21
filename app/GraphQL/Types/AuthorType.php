@@ -12,7 +12,7 @@ class AuthorType extends GraphQLType
 
 
     protected $attributes = [
-        'name' => 'Book',
+        'name' => 'Author',
         'description' => 'collection of Author',
         'model' => User::class
     ];
