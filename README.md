@@ -36,4 +36,6 @@ This is a simple GraphQL API built with Laravel that allows users to interact wi
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/almant12/graphqlLaravel.git
+   cd graphqlLaravel
+   ```
