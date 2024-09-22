@@ -50,6 +50,7 @@ This is a simple GraphQL API built with Laravel that allows users to interact wi
 4. Clone your .env.example to .env:
       ```bash
    cp .env.example .env
+      
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
