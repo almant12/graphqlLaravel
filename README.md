@@ -69,3 +69,7 @@ This is a simple GraphQL API built with Laravel that allows users to interact wi
    ```bash
    php artisan serve
    ```
+8. After starting the development server, you can easily interact with the GraphQL API using the GraphQL Playground. This tool provides a user-friendly interface for testing your GraphQL queries and mutations.
+    ```bash
+   http://localhost:8000/graphql-playground
+   ```
