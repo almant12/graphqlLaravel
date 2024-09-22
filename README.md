@@ -39,14 +39,33 @@ This is a simple GraphQL API built with Laravel that allows users to interact wi
    git clone https://github.com/almant12/graphqlLaravel.git
    cd graphqlLaravel
    ```
-2. Clone your .env.example to .env
+2. install the dependencies of the project:
+    ```bash
+   composer install
+   ```
+3. Generate the application key your Laravel project:
+    ```bash
+   php artisan key:generate
+   ```
+4. Clone your .env.example to .env:
       ```bash
    cp .env.example .env
-   // Put your database credentials
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=
-   DB_USERNAME=
-   DB_PASSWORD=
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_database_username
+   DB_PASSWORD=your_database_password
+   ```
+5. Run the database migrations to set up your database tables:
+     ```bash
+   php artisan migrate
+   ```
+6. Run Seeder to populate your database with sample data:
+    ```bash
+   php artisan db:seed
+   ```
+7. Start the development server
+   ```bash
+   php artisan serve
    ```
