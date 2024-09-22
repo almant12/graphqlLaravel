@@ -1,66 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:590/0*I6C8hkAaHTaINXav.png" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# GraphQL Laravel Project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This is a simple GraphQL API built with Laravel that allows users to interact with authors, books, categories. It provides a flexible and efficient way to query and manipulate data.
 
-## Learning Laravel
+## Benefits of Using GraphQL
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Flexible Data Retrieval**: GraphQL allows clients to request exactly the data they need, reducing over-fetching and under-fetching of data.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Single Endpoint**: Unlike REST APIs, which typically have multiple endpoints, GraphQL uses a single endpoint for all requests, simplifying client-server interactions.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Strongly Typed Schema**: GraphQL has a defined schema that specifies the types and structure of data, which helps catch errors early and improves documentation.
 
-## Laravel Sponsors
+- **Efficient Queries**: Clients can combine multiple resource requests into a single query, minimizing the number of network requests needed to fetch data.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Real-time Capabilities**: With subscriptions, GraphQL can support real-time updates, making it easier to implement features like notifications or live data updates.
 
-### Premium Partners
+- **Strong Ecosystem**: A robust ecosystem of libraries and tools is available for integrating GraphQL with various frameworks, enhancing development efficiency.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Technologies Used
 
-## Code of Conduct
+- PHP
+- Laravel
+- GraphQL (Rebing/GraphQL)
+- MySQL
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Installation
 
-## Security Vulnerabilities
+1. Clone the repository:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```bash
+   git clone https://github.com/almant12/graphqlLaravel.git
+   cd graphqlLaravel
+   ```
+2. install the dependencies of the project:
+    ```bash
+   composer install
+   ```
+3. Generate the application key your Laravel project:
+    ```bash
+   php artisan key:generate
+   ```
+4. Clone your .env.example to .env:
+      ```bash
+   cp .env.example .env
+      
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_database_username
+   DB_PASSWORD=your_database_password
+   ```
+5. Run the database migrations to set up your database tables:
+     ```bash
+   php artisan migrate
+   ```
+6. Run Seeder to populate your database with sample data:
+    ```bash
+   php artisan db:seed
+   ```
+7. Start the development server
+   ```bash
+   php artisan serve
+   ```
+8. After starting the development server, you can easily interact with the GraphQL API using the GraphQL Playground. This tool provides a user-friendly interface for testing your GraphQL queries and mutations.
+    ```bash
+   http://localhost:8000/graphql-playground
+   ```
