@@ -6,17 +6,7 @@
 
 ## Overview
 
-This is a GraphQL API built with Laravel that allows users to interact with [your application features, e.g., authors, books, categories]. It provides a flexible and efficient way to query and manipulate data.
-
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [GraphQL Endpoints](#graphql-endpoints)
-- [Queries and Mutations](#queries-and-mutations)
-- [License](#license)
+This is a simple GraphQL API built with Laravel that allows users to interact with authors, books, categories. It provides a flexible and efficient way to query and manipulate data.
 
 ## Benefits of Using GraphQL
 
@@ -39,8 +29,7 @@ This is a GraphQL API built with Laravel that allows users to interact with [you
 - PHP
 - Laravel
 - GraphQL (Rebing/GraphQL)
-- MySQL (or other database)
-- [Any other technologies you used]
+- MySQL
 
 ## Installation
 
