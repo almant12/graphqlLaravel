@@ -39,3 +39,14 @@ This is a simple GraphQL API built with Laravel that allows users to interact wi
    git clone https://github.com/almant12/graphqlLaravel.git
    cd graphqlLaravel
    ```
+2. Clone your .env.example to .env
+      ```bash
+   cp .env.example .env
+   // Put your database credentials
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=
+   DB_USERNAME=
+   DB_PASSWORD=
+   ```
